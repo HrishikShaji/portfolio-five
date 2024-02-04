@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { data } from "../lib/data";
 import { BugSvg } from "./BugSvg";
 import { ResponsiveSvg } from "./ResponsiveSvg";
@@ -69,8 +70,20 @@ export const Hero = () => {
       <div className="p-10 text-yellow-500 flex items-center bg-black rounded-3xl  row-span-3 ">
         <h1 className="text-9xl">see preojects</h1>
       </div>
-      <div className="p-10 bg-yellow-500 text-black rounded-3xl  row-span-2 col-span-3">
-        <h1 className="text-9xl"> preojects</h1>
+      <div className="p-10 bg-yellow-500 text-black flex items-center justify-center rounded-3xl  row-span-2 col-span-3">
+        <div className="grid grid-cols-4 gap-4">
+          {data.projects.data.map((project, i) => (
+            <div className="h-[200px]" key={i}>
+              <Image
+                src={project.img}
+                alt="image"
+                className="w-full h-full object-cover rounded-2xl"
+                height={1000}
+                width={1000}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       <div className="p-10 bg-white text-black rounded-3xl   ">
         <h1 className="text-9xl">contact me</h1>
