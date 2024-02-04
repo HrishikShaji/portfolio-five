@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import { data } from "../lib/data";
 import { BugSvg } from "./BugSvg";
 import { ResponsiveSvg } from "./ResponsiveSvg";
 import { ReuseSvg } from "./ReuseSvg";
+import { Slider } from "./Slider";
 
 export const Hero = () => {
   return (
@@ -65,7 +67,7 @@ export const Hero = () => {
         <h1 className="text-9xl">fake</h1>
       </div>
       <div className="p-10  rounded-3xl bg-pink-500 text-black col-span-2 ">
-        <h1 className="text-9xl">testi</h1>
+        <Slider items={data.testimonials} />
       </div>
       <div className="p-10 text-yellow-500 flex items-center bg-black rounded-3xl  row-span-3 ">
         <h1 className="text-9xl">see preojects</h1>
