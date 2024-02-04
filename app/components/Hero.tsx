@@ -44,8 +44,17 @@ export const Hero = () => {
       <div className="p-10  bg-green-500 text-black rounded-3xl col-span-2 ">
         <h1 className="text-9xl">Skills</h1>
       </div>
-      <div className="p-10 bg-black text-green-500 rounded-3xl col-span-2  row-span-2">
-        <h1 className="text-9xl">Skills</h1>
+      <div className="p-5 bg-black text-green-500 flex items-center justify-center rounded-3xl col-span-2  row-span-2">
+        <div className="grid grid-cols-4 gap-4">
+          {data.skills.data.map((skill, i) => (
+            <div
+              key={i}
+              className="p-2  h-[150px] w-[150px] rounded-md bg-green-500 text-black"
+            >
+              {skill}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="p-10 bg-black text-pink-500 rounded-3xl flex items-end  row-span-2">
