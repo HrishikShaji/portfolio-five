@@ -114,15 +114,15 @@ export const Hero = () => {
       <div className="p-10 bg-black rounded-3xl  col-span-3">
         <form className="flex flex-col gap-2">
           <input
-            className="border-b-4 border-white bg-black placeholder:text-white w-full py-2"
+            className="border-b-4 border-white bg-black focus:outline-none placeholder:text-white w-full py-2"
             placeholder="Name..."
           />
           <input
-            className="border-b-4 border-white bg-black placeholder:text-white w-full py-2"
+            className="border-b-4 border-white focus:outline-none bg-black placeholder:text-white w-full py-2"
             placeholder="Email..."
           />
           <textarea
-            className="border-b-4 border-white bg-black placeholder:text-white w-full py-2"
+            className="border-b-4 focus:outline-none border-white bg-black placeholder:text-white w-full py-2"
             placeholder="Message..."
           />
           <button className="focus:outline-none">
