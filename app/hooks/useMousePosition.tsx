@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import gsap from "gsap";
 import { CursorContext } from "../providers/CursorContext";
 
 const useMousePosition = () => {
@@ -11,7 +10,7 @@ const useMousePosition = () => {
   const { cursor } = useContext(CursorContext);
 
   const updatePosition = (event: MouseEvent) => {
-    const { pageX, pageY, clientX, clientY } = event;
+    const { clientX, clientY } = event;
     setPosition({
       clientX,
       clientY,
